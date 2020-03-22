@@ -10,8 +10,8 @@ flask = "*"
 gunicorn = "*"
 folium = "*"
 covid19py = "*"
-requirements = "*"
 pandas = "*"
+requests = "*"
 
 [requires]
 python_version = "3.6"
