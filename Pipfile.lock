@@ -46,10 +46,10 @@
         },
         "covid19py": {
             "hashes": [
-                "sha256:a1d51159e68977485f7b2c0fdca094fecb0f125f9621b2be80e57fe6d3c8fb2e"
+                "sha256:9bc2eb02a2a7410975f24913bcb0ab4ab7eaac7fd19271aad2eacdca61efe50f"
             ],
             "index": "pypi",
-            "version": "==0.2.0"
+            "version": "==0.3.0"
         },
         "flask": {
             "hashes": [
