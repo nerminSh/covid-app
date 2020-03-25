@@ -6,12 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
-gunicorn = "*"
 folium = "*"
 covid19py = "*"
+time = "*"
 pandas = "*"
+flask = "*"
 requests = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
