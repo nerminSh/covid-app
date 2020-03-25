@@ -8,11 +8,11 @@ verify_ssl = true
 [packages]
 folium = "*"
 covid19py = "*"
-time = "*"
 pandas = "*"
 flask = "*"
 requests = "*"
 gunicorn = "*"
+datetime = "*"
 
 [requires]
 python_version = "3.6"

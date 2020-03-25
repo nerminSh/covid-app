@@ -1,7 +1,7 @@
 import folium
 import pandas
 import COVID19Py
-import time
+from datetime import datetime
 
 try:
     covid19 = COVID19Py.COVID19()
@@ -27,9 +27,8 @@ for temp in locations:
     loc.append(temp["country"] + " " + temp["province"])
     confirm.append(temp["latest"]["confirmed"])
     death.append(temp["latest"]["deaths"])
-    t = time.strptime(temp["last_updated"][:19], "%Y-%m-%dT%H:%M:%S")
-    update.append(time.strftime("%d/%m/%Y %H:%M:%S", t))
-    
+    t = datetime.strptime(temp["last_updated"][:19], "%Y-%m-%dT%H:%M:%S")
+    update.append(t.strftime("%d/%m/%Y %H:%M:%S"))
 
 def putColor(confirm):
     if confirm < 200:
