@@ -61,7 +61,7 @@ def number_of_deaths(dataB, country):
 
 
 fgp.add_child(folium.GeoJson(data = open('world.json', 'r', encoding='utf-8-sig').read(),
-style_function = lambda x: {'fillColor' : 'green' if number_of_deaths(locations, x["properties"]["NAME"]) < 10
+style_function = lambda x: {'fillColor' : 'green' if number_of_deaths(locations, x["properties"]["NAME"]) < 30
 else 'orange' if 30 <= number_of_deaths(locations, x["properties"]["NAME"]) < 100 else 'red' }))
 
 
