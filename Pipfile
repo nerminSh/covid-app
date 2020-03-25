@@ -13,7 +13,6 @@ covid19py = "*"
 pandas = "*"
 requests = "*"
 jquery = "*"
-flask-bootstrap = "*"
 
 [requires]
 python_version = "3.6"
