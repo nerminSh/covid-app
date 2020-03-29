@@ -18,7 +18,7 @@ def result():
         rolls = request.form["rolls"]
         soc = request.form["socOpt"]
         rolls = int(rolls)
-        if name.capitalize() in ("Nedim", "Ibrahim", "Mugdim", "Ahmed", "Ekrem", "Ibro", "Anes", "Dzenan"):
+        if name.capitalize() in ("Nedim", "Amir", "Ibrahim", "Mugdim", "Ahmed", "Ekrem", "Ibro", "Anes", "Dzenan"):
             perc = name.capitalize() + "e ti si jedan veliki covIDIOT heheh salim se\n btw kupi jos toalet papira. Selam"
         elif rolls > 30 and soc == "socNo":
             perc = "You are definitely a covIDIOT."
