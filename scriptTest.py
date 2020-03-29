@@ -20,6 +20,8 @@ def result():
         rolls = int(rolls)
         if name.capitalize() in ("Nedim", "Amir", "Ibrahim", "Mugdim", "Ahmed", "Ekrem", "Ibro", "Anes", "Dzenan"):
             perc = name.capitalize() + "e ti si jedan veliki covIDIOT heheh salim se\n btw kupi jos toalet papira. Selam"
+        elif name.capitalize() == "Emina510":
+            perc = "Bebaaaa moja najpozeljenija. Ne moze bit nikad covIDIOT :P"
         elif rolls > 30 and soc == "socNo":
             perc = "You are definitely a covIDIOT."
         elif rolls <= 30 and soc == "socYes":
