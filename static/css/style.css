@@ -635,7 +635,7 @@ input[type=submit]:invalid {
 
 }
 
-input:invalid, input[type="radio"], select:invalid{
+input:invalid, select:invalid{
     border: 1px solid rgb(255, 0, 0);
     color:#ff0000;
 
