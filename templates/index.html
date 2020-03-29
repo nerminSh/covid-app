@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-    <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     
-     
-     
-     <link rel="stylesheet"  href ="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="{{url_for("static", filename= "css/carousel.css")}}">
-     
-     <script data-ad-client="ca-pub-9958655070353538" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     
-     <title>Nermin's coVID Web APP</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../static/images/favicon.ico">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{url_for("static", filename= "css/temp.css")}}"> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <title>stayAtHome</title>
     </head>
 
     <body> 
@@ -20,16 +26,27 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">#DontBeCovIDIOT.</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">#DontBeCovIDIOT.</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('index') }}">Home
+                <li class="nav-item ">
+                <a class="nav-link" href="{{ url_for('index') }}"> 
+                  <svg class="bi bi-house-door-fill" width="2.5em" height="1.3em" viewBox="0 1 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 10.995V14.5a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"/>
+                  </svg>
+                  
                         <span class="sr-only">(current)</span>
                     </a>
+                </li>
+
+             
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('forma') }}">stayAtHome</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="https://howmuchtoiletpaper.com/" target="_blank">T-P Calculator</a>
@@ -43,58 +60,66 @@
         </div>
         </nav>
 
-        <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-            <!-- Slide One - Set the background image for this slide in the line below -->
-             <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                <h2 class="display-4" style = "color: rgb(0, 0, 0);"><b>COVID-19</h2>
-                <p class="lead" style = "color: rgb(0, 0, 0);"> <b> Corona Virus has no race!</p>
-                </div>
-             </div>
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-             <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1584109807991-ebfcd80112a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1554&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                <h2 class="display-4" style = "color: rgb(0, 0, 0);"><b> T-P Calculator.</h2>
-                <p class="lead" style = "color: rgb(0, 0, 0);"> <b> Find out how much of toilet paper you need <br> to survive the pandemic </p>
-                </div>
-             </div>
-            <!-- Slide Three - Set the background image for this slide in the line below -->
-             <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1584291527908-033f4d6542c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')">
-                <div class="carousel-caption d-none d-md-block">
-                <h2 class="display-4"> <b> covMAP.</h2>
-                <p class="lead"> <b> World Map with the latest data <br> of COVID-19 cases</p>
-                </div>
-             </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-                </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-                </a>
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+     <!-- Slide One - Set the background image for this slide in the line below -->
+     <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/3951359/pexels-photo-3951359.jpeg?cs=srgb&dl=person-in-yellow-protective-suit-3951359.jpg&fm=jpg')">
+        <div class="carousel-caption d-block d-md-block">
+        <h2 class="display-4"  
+          href="{{ url_for('forma') }}">stayAtHome.
+        </h2>
+        <p class="lead">Find out how much do you need to go out and try not to be a <STRONG>covIDIOT</STRONG></p>
         </div>
-        </header>
-
-        <!-- Page Content -->
-        <section class="py-5">
-        <div class="container">
-            <h1 class="display-4">covIDIOT - Made in Bosnia and Herzegovina</h1>
-            <p class="lead">All Rights Reserved by Nermin Šero</a>!</p>
+     </div>
+    <!-- Slide Two - Set the background image for this slide in the line below -->
+     <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1584109807991-ebfcd80112a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1554&q=80')">
+        <div class="carousel-caption d-block d-md-block">
+        <h2 class="display-4">T-P Calculator.</h2>
+        <p class="lead"> Find out how much of <STRONG>toilet paper</STRONG> you need to survive the pandemic</p>
         </div>
-        </section>
+     </div>
+    <!-- Slide Three - Set the background image for this slide in the line below -->
+     <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/3951603/pexels-photo-3951603.jpeg?cs=srgb&dl=woman-holding-world-map-3951603.jpg&fm=jpg')">
+        <div class="carousel-caption d-block d-md-block">
+        <h2 class="display-4"> covMAP.</h2>
+        <p class="lead">World Map with the <STRONG>latest data</STRONG> of COVID-19 cases</p>
+        </div>
+     </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
 
+<!-- Page Content -->
+<section class="py-5">
+    <div class="container">
+        <h1 class="display-4">covIDIOT APP - Made in Bosnia and Herzegovina</h1>
+        <p class="lead"> For collaboration contact
+          <a href=mailto:stayathome.covidiot@gmail.com?subject="COVID Collaboration">stayathome.covidiot@gmail.com .</a>   
+        </p>
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+    </div>
+    </section>
+<!-- /.container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
+  </body>
 </html>

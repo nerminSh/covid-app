@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>stayAtHome</title>
+    <link rel="shortcut icon" href="../static/images/favicon.ico">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" href="{{url_for("static", filename= "css/opensans-font.css")}}">
+
+	<link rel="stylesheet" href="{{url_for("static", filename= "fonts/material-design-iconic-font/css/material-design-iconic-font.min.css")}}">
+
+
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="{{url_for("static", filename= "css/style.css")}}">
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Navigation -->
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">#DontBeCovIDIOT.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}"> 
+                  <svg class="bi bi-house-door-fill" width="2.5em" height="1.3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 10.995V14.5a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5h-4a.5.5 0 01-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd"/>
+                  </svg>
+                  
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+             
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('forma') }}">stayAtHome</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://howmuchtoiletpaper.com/" target="_blank">T-P Calculator</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('map') }}" target="_blank">covMAP</a>
+                </li>
+                
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        
+        <section class="maintitle">
+            <div class="container">
+                <h1 class="maintit"> {{ firstname }}, please stay at Home!</h1>
+                <h2 class="subtitle"> {{ perc }} </h2>
+        
+            </div>
+            </section>
+
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
